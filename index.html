@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./images/logo.png"
+      type="image/x-icon"
+    />
+    <title>Travel Explorer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fuggles&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Fuggles&family=Work+Sans:wght@100;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav start here -->
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" href="#">
+        <img src="./images/logo.png" alt="" />
+        Travel Explorer</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#nav-bar"
+              >Home<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page2">Book</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#page3"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Packages
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#India">India</a>
+              <a class="dropdown-item" href="#us">United State</a>
+              <a class="dropdown-item" href="#Australia">Australia</a>
+              <a class="dropdown-item" href="#France">France</a>
+              <a class="dropdown-item" href="#Germany">Germany</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page4">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#page5">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer2">About</a>
+          </li>
+        </ul>
+
+        <button
+          class="btn my-2 my-sm-0"
+          type="submit"
+          data-toggle="modal"
+          data-target="#login-model"
+        >
+          Login
+        </button>
+
+        <button
+          class="btn my-2 my-sm-0"
+          type="submit"
+          data-toggle="modal"
+          data-target="#signin-model"
+        >
+          Register Now
+        </button>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+    <!-- go to home page starts here -->
+    <div title="back to top" id="go-up">
+      <a href="#nav-bar"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+    <!-- go to home page ends here -->
+
+    <!-- login section -->
+    <div class="modal" id="login-model">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><h5>Please loging</h5></div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <div class="mb-4">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Id"
+                  />
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary login">
+                  Login
+                </button>
+              </div>
+            </form>
+            <div class="isthere">
+              Didn't have an account? please
+              <a href="#signin-model" data-toggle="modal" data-dismiss="modal"
+                >Signin</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- signin section -->
+    <div class="modal" id="signin-model">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><h5>Please SignUp</h5></div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <div class="mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Full Name"
+                  />
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Contact Number"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label for="">Date Of Birth</label>
+                  <input type="date" name="dob" required />
+                </div>
+                <div class="mb-4">
+                  <select name="" id="" required>
+                    <option value="">--Gender--</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Other</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Id"
+                    id="email-id"
+                  />
+                  <div id="" class="form-text">
+                    <p id="emailtext">
+                      We'll never share your email with anyone else.
+                    </p>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    id="password"
+                  />
+                  <p id="pw-text"></p>
+                </div>
+                <div class="mb-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="re-enter Password"
+                    id="repassword"
+                  />
+                  <p id="repw-text"></p>
+                </div>
+                <button type="submit" class="btn btn-primary sign">
+                  Register
+                </button>
+              </div>
+            </form>
+            <div class="isthere">
+              Already have an account? please
+              <a href="#login-model" data-toggle="modal" data-dismiss="modal"
+                >Login</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- login section ends here -->
+
+    <!--start of first section -->
+    <section id="page1">
+      <div class="content">
+        <h1>
+          Welcome To Travel Explorer
+        </h1>
+        <p>Visit Places-<br /><span class="changetext"></span></p>
+        <a href="#page2" class="new" type="submit">Book Now</a>
+      </div>
+    </section>
+    <!-- end of first section -->
+
+    <!-- start of page2 -->
+    <section id="page2">
+      <div id="bookings">
+        <div class="brand-logo">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <div class="booking-info">
+          <form action="">
+            <select class="form-select first-input" required>
+              <option value="">Select where you want to go</option>
+              <option value="India">India</option>
+              <option value="Ayodhya">Ayodhya India</option>
+              <option value="France">France</option>
+              <option value="Taj Mahal">Taj Mahal India</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="United-State">United-State</option>
+              <option value="Germany">Germany</option>
+              <option value="Australia">Australia</option>
+              <option value="NewYork">NewYork</option>
+            </select>
+
+            <label for="">How many person</label>
+            <select
+              class="form-select second-input"
+              aria-label="Default select example"
+              required
+            >
+              <option value="">Click to select</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+              <option value="4">four</option>
+              <option value="5">five</option>
+            </select>
+
+            <label for="">Start date</label>
+            <input
+              class="fourth-input"
+              type="date"
+              value=""
+              name=""
+              id="start"
+              required
+            />
+
+            <label for="">End date</label>
+            <input
+              class="third-input"
+              type="date"
+              value=""
+              name=""
+              id="end"
+              required
+            />
+
+            <div class="form-floating">
+              <label for="floatingTextarea">Description</label>
+              <textarea
+                class="form-control fifth-input"
+                placeholder="Leave a comment here"
+                id="floatingTextarea"
+                rows="3"
+                minlength="50"
+                maxlength="500"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <button onclick="onSubmit()" type="submit" class="book-btn">
+                Book Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- end of page2 -->
+
+    <!-- page3 starts hete -->
+    <section id="page3" class="container-fluid">
+      <h2 class="gallery-heading">Package Gallery</h2>
+      <div id="package">
+        <div class="card" id="India" style="width: 18rem">
+          <img
+            src="https://www.india.com/wp-content/uploads/2020/08/ram-cover.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Ayodhya India</h5>
+            <p class="card-text">
+              The Ram Mandir is a Hindu temple in Ayodhya, Uttar Pradesh, India.
+              Many Hindus believe that the mythical birthplace of Rama, a
+              principal deity of Hinduism.
+            </p>
+            <p class="price">Price: $1500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="France" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.DB8eOk1y4SdWgM7GqkCx2gHaE7?pid=ImgDet&w=384&h=256&rs=1"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit France</h5>
+            <p class="card-text">
+              France has 45 sites inscribed in the UNESCO's World Heritage List
+              and features cities or sites of high cultural interest, Paris is
+              being the foremost, but also Loire Valley,
+            </p>
+            <p class="price">Price: $1000</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="India" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.C1bH6nhDixeoOvELYZW4XQHaFP?w=384&h=256&c=7&r=0&o=5&pid=1.7"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Taj Mahal India</h5>
+            <p class="card-text">
+              The Taj Mahal is an ivory-white marble mausoleum situated on the
+              southern bank of the Yamuna River in the city of Agra, Uttar
+              Pradesh, India.
+            </p>
+            <p class="price">Price: $800</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="swis" style="width: 18rem">
+          <img
+            src="https://journeyz.co/wp-content/uploads/2020/08/Basel-2048x1365.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Switzerland</h5>
+            <p class="card-text">
+              Switzerland, a land of stunning natural beauty, beckons travelers
+              with its majestic mountains, serene lakes, and charming villages.
+            </p>
+            <p class="price">Price: $1200</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="us" style="width: 18rem">
+          <img
+            src="https://www.thewowstyle.com/wp-content/uploads/2015/03/Chicago-Illinois.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit United-State</h5>
+            <p class="card-text">
+              The United States is a vast and diverse country with an abundance
+              of captivating tourist destinations.Let’s explore some of the most
+              iconic ones:
+            </p>
+            <p class="price">Price: $2500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="Germany" style="width: 18rem">
+          <img
+            src="https://lp-cms-production.imgix.net/2021-06/GettyRF_465892570.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Germany</h5>
+            <p class="card-text">
+              Germany, or Deutschland as the locals call it, is a captivating
+              country with a rich tapestry of history, culture, and natural
+              beauty.
+            </p>
+            <p class="price">Price: $900</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="india" style="width: 18rem">
+          <img
+            src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Gateway-of-India-1.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit India</h5>
+            <p class="card-text">
+              India, a land of diverse landscapes, offers a plethora of
+              captivating tourist destinations. Here are some remarkable places
+              to explore:
+            </p>
+            <p class="price">Price: $2500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="Australia" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.SPdTDr-xJh5tA9tGYkK48gHaE8?rs=1&pid=ImgDetMain"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit Australia</h5>
+            <p class="card-text">
+              Popular Australian destinations include the coastal cities of
+              Sydney, Brisbane and Melbourne, as well as other high-profile.
+            </p>
+            <p class="price">Price: $3500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+        <div class="card" id="us" style="width: 18rem">
+          <img
+            src="https://th.bing.com/th/id/OIP.9FHZ19x0A-4-yJfTMblEPwHaE8?rs=1&pid=ImgDetMain"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Visit NewYork</h5>
+            <p class="card-text">
+              New York is a vibrant state in the United States, known for its
+              iconic city, diverse culture, and stunning natural beauty.
+            </p>
+            <p class="price">Price: $4500</p>
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- page3 ends here -->
+
+    <!-- page4 starts here -->
+    <section id="page4">
+      <h2 class="gallery-heading">Value Added Services</h2>
+      <div class="service-container">
+        <div class="service">
+          <!-- hotels -->
+          <div class="thumbnail">
+            <img
+              src="https://gttp.imgix.net/224999/x/0/amanpulo-philippines-west-villa-clubhouse-high-res-13855.jpg"
+              alt="thumbnail"
+            />
+          </div>
+          <p class="">
+            <span><i class="fa-solid fa-hotel"></i></span> Accommodation is one
+            of the most essential service offered in the tourism industry.
+            Hotels, resorts, motels, lodges, and hostels are some of the options
+            available for travelers to choose from. These accommodations provide
+            comfortable living spaces with various amenities such as room
+            service, Wi-Fi connectivity, swimming pools, spas, and fitness
+            centers.
+          </p>
+        </div>
+        <div class="service">
+          <!-- Foods and drinks -->
+          <div class="thumbnail">
+            <img
+              src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="thumbnail"
+            />
+          </div>
+          <p>
+            <span><i class="fa-solid fa-utensils"></i></span> Food is an
+            integral part of any trip or vacation. The tourism industry provides
+            various food services such as restaurants, cafes, food trucks, and
+            street food vendors. These food services cater to different cuisines
+            and dietary requirements. only on particular travel packages**.
+          </p>
+        </div>
+        <div class="service">
+          <!-- Insurance -->
+          <div class="thumbnail">
+            <img
+              src="https://awardwallet.com/blog/wp-content/uploads/2016/11/Travel-Insurance-Featured.jpg"
+              alt="thumbnail"
+            />
+          </div>
+          <p>
+            <span><i class="fa-solid fa-user-shield"></i></span> Get the best
+            travel Insurence provided by us including flight missing, baggage
+            missing, accidents, medical emergencies and so on.
+          </p>
+        </div>
+        <div class="service">
+          <!-- door step services -->
+          <div class="thumbnail">
+            <img
+              src="https://img.freepik.com/premium-vector/safe-food-delivery-concept_23-2148559601.jpg?w=1060"
+              alt="thumbnail"
+            />
+          </div>
+          <p>
+            <span><i class="fa-solid fa-house-flag"></i></span> Finding out time
+            from the busy schedules to submit or collect documents is
+            challenging. But here at Travel Euphoria. you don't even have to
+            step your foot into our office. From collection of documents to
+            delivery, all is delivered at your doorstep to make your life easy
+            and traveling experience pleasantly unforgettable.
+          </p>
+        </div>
+        <div class="service">
+          <!-- live support -->
+          <div class="thumbnail">
+            <img
+              src="https://th.bing.com/th/id/R.d160003048d7a7d8998f44e6042465bf?rik=%2bwJASh3WUjwe3g&riu=http%3a%2f%2f3.bp.blogspot.com%2f-ZSQlHuo1_pE%2fT7nWjH4w_gI%2fAAAAAAAAAU0%2fcsS3KiGZxnE%2fs1600%2flive%2bsupport.png&ehk=ulRu04EYTEVDkeFUQScJuBe7mY6Lvp%2fdFQfplDYy%2fxk%3d&risl=&pid=ImgRaw&r=0"
+              alt="thumbnail"
+            />
+          </div>
+          <p>
+            <span><i class="fa-solid fa-phone-volume"></i></span> Being
+            available 24/7 for our prestigious clients in what we aim for where
+            all your concerns are taken care of until you are 100% satisfied.
+          </p>
+        </div>
+        <div class="service">
+          <!-- car services -->
+          <div class="thumbnail">
+            <img
+              src="https://www.tripsavvy.com/thmb/UyfS76voGNCPHJWuvfspRKmg2Qk=/5616x3744/filters:fill(auto,1)/white-bus-crossing-the-alpes-157526603-53b7ac4061de4ca4a6bf3146c4ee2d41.jpg"
+              alt="thumbnail"
+            />
+          </div>
+          <p>
+            <span> <i class="fa-solid fa-car"></i></span> One of the most
+            crucial aspects of any trip is transportation. The tourism industry
+            offers various modes of transportation such as air travel, rail
+            travel, road travel, and water travel. The airline industry is an
+            integral part of the tourism industry as it connects people from
+            different parts of the world.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- page4 ends here -->
+        <!-- Gallery Starts here -->
+        <section id="page5">
+          <h2 class="gallery-heading">Glimps of Memories</h2>
+          <div class="Gallery container">
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://1.bp.blogspot.com/-Z7I_rewhqro/XRiMjFh36yI/AAAAAAAACRo/9mgKX7h2y54ymbMEE4OB0303XQWdgF3xQCEwYBhgL/s1600/IMG_20190630_151102.jpg"
+                      alt="India"
+                    />
+                  </div>
+                  <div class="col-12 top-div">
+                    <img
+                    src="https://tse3.mm.bing.net/th?id=OIP.1TeQlWmgdfn1BW63C69IzwHaEK&pid=Api&P=0&h=220"
+                   alt="Italy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 right-first-div">
+                    <img
+                      src="https://tse1.mm.bing.net/th?id=OIP.0ECv-1tDidleKjoegjPNAgHaGl&pid=Api&P=0&h=220
+                      "
+                      alt="France"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1583855282680-6dbdc69b0932?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Italy"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1494449880320-18d3dae5d16e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="stachu"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://images.unsplash.com/photo-1528728329032-2972f65dfb3f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="germany"
+                    />
+                  </div>
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="India"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 right-first-div">
+                    <img
+                      src="https://images.unsplash.com/photo-1618259278412-2819cbdea4dc?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="germany"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1608344859055-a2d11495423d?q=80&w=1553&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="couple"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1520440229-6469a149ac59?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="people at tourist place"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="India"
+                    />
+                  </div>
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://wallpapercave.com/wp/wp3201183.jpg"
+                      alt="family"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 right-first-div">
+                    <img
+                      src="https://www.beaches.com/blog/content/images/2021/01/Beaches-Turks-Caicos-Family-Walk-Beach.jpg"
+                      alt="family at beach"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.pexels.com/photos/4171211/pexels-photo-4171211.jpeg?auto=compress&cs=tinysrgb&w=600"
+                      alt=""
+                    />
+                  </div>
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1514970746-d4a465d514d0?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://images.unsplash.com/photo-1496568816309-51d7c20e3b21?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="america"
+                    />
+                  </div>
+                  <div class="col-12 top-div">
+                    <img
+                      src="https://handluggageonly.co.uk/wp-content/uploads/2014/10/Hand-Luggage-Only-6.jpg"
+                      alt="Switzerland"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="row">
+                  <div class="col-12 right-first-div">
+                    <img
+                      src="https://www.realestate.com.au/blog/wp-content/uploads/2016/11/03164126/Australia-hero.jpg"
+                      alt="australia"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1530841344029-ec3ae0fa4cc4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Switzerland"
+                    />
+                  </div>
+                  <div class="col-md-6 col-12 bottom_div">
+                    <img
+                      src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?q=80&w=1366&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt="Italy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Gallery ends here -->
+        <!-- About section starts here-->
+        <footer>
+          <div class="img-container">
+            <h3>Travel Explorer</h3>
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <div class="about-us">
+            <h5>ABOUT US</h5>
+            <p>
+              Hi, I am Pradhuman Dubey. Traveller and the founder of the Travel Explorer
+              the complete tours & travels solution. Travel Explorer features the most
+              amazing sights around the world within the budget divided into various
+              “best of” lists. I enjoy travelling the world so why not you come join
+              us have a great deals on travel packages. The destinations can be
+              anything from landscapes, beaches, ancient monuments, islands, wildlife,
+              countries and anything else that is interesting. we provide best possible deals on Tours and Travels to choose one. 
+            </p>
+          </div>
+    
+          <div class="imp-links">
+            <h5>Important Links</h5>
+            <li><a href="#nav-bar">HOME</a></li>
+            <li><a href="#page2">BOOK</a></li>
+            <li><a href="#page3">PACKAGES</a></li>
+            <li><a href="#page4">SERVICES</a></li>
+            <li><a href="#page5">GALLERY</a></li>
+            <li><a href="#footer2">ABOUT</a></li>
+          </div>
+        </footer>
+        <!-- About section ends here -->
+        <footer id="footer2">
+          <div class="upper">
+            <div class="brand-name">
+              <label
+                >Travel Explorer
+                <img
+                  src="images/logo.png"
+                  alt="logo"
+              /></label>
+            </div>
+            <div class="social-icon">
+              <div class="icons"><i class="fa-brands fa-facebook"></i></div>
+              <div class="icons"><i class="fa-brands fa-instagram"></i></div>
+              <div class="icons"><i class="fa-brands fa-google"></i></div>
+              <div class="icons"><i class="fa-brands fa-x-twitter"></i></div>
+              <div class="icons"><i class="fa-brands fa-youtube"></i></div>
+            </div>
+          </div>
+          <div class="lower">
+            <h6>2024 © TravelExplorer.com | All Rights Reserved.</h6>
+            <h6>mob:- 9301798766</h6>
+          </div>
+        </footer>
+    
+    
+    <script>
+      $(document).ready(function () {
+        $("#email-id").keyup(function () {
+          if (mailCheck()) {
+            $("#emailtext").text("Valid email").css({ color: "green" });
+            $("#email-id").css("border", "2px solid green");
+          } else {
+            $("#emailtext").text("Not a Valid email!").css("color", "red");
+            $("#email-id").css("border", "2px solid red");
+          }
+        });
+
+        function mailCheck() {
+          let mailData = $("#email-id").val();
+          let mailPattern = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+
+          if (mailPattern.test(mailData)) {
+            return true;
+          } else {
+            return false;
+          }
+        }
+
+        $("#password").keyup(function () {
+          if (passwordCheck()) {
+            $("#pw-text").text("password is correct");
+          } else {
+            $("#pw-text").text(
+              "password should contain alphabates (A-Z),(a-z),numbers (0-9),special characters (#?!@$%^&*-) and within range (8-16)"
+            );
+          }
+        });
+
+        function passwordCheck() {
+          let passwordData = $("#password").val();
+          let passwordPattern =
+            /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$/;
+
+          if (passwordPattern.test(passwordData)) {
+            return true;
+          } else {
+            return false;
+          }
+          return passwordData;
+        }
+
+        $("#repassword").keyup(function () {
+          let passwordData = $("#password").val();
+          let repasswordData = $("#repassword").val();
+
+          if (passwordData == repasswordData) {
+            $("#repw-text").text("password verified");
+          } else {
+            $("#repw-text").text("password is not correct");
+          }
+        });
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, "0");
+        var mm = String(today.getMonth() + 1).padStart(2, "0");
+        var yyyy = today.getFullYear();
+
+      today = yyyy + "-" + mm + "-" + dd;
+        $("#start").attr("min", today);
+        $("#end").attr("min", today);
+
+      });
+    </script>
+    <script src="logic.js"></script>
+  </body>
+</html>
